@@ -1,14 +1,22 @@
-# bash-vscode-javascript-project-manager
+# simple-coding-project-manager
 
-Command line utility written in Bash to allow selection of a project to edit with the options to:
+Utility to allow the selection of a project to edit using the command line by browsing a fixed format folder structure.
 
-- Check/update the dependencies using pnpm
-- Run Rollup watch
-- Edit in VS Code.
+Designed for simplicity, it can be used with any programming language, but currently only has additional features for JavsScript/TypeScript. It assumes use of [pnpm](https://github.com/pnpm/pnpm) as your package manager.
 
-## Usage
-
-         Directory structure in PROJECT_FOLDER should have two levels:
+         Dir structure in PROJECT_FOLDER must have two levels for selection:
 
            ├── language-name
            │   ├── project-name
+
+Intelligent inspection of the `project-name` folder chosen gives the user options.
+
+For JavaScript and TypeScript projects:
+
+- Check/update the dependencies using pnpm if `package.json` found
+- Run Rollup watch if Rollup local install detected
+- Edit in Visual Studio Code
+
+## Usage
+
+Place the script in the system `$PATH` and check it is executable. Run it.
