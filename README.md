@@ -2,7 +2,7 @@
 
 Utility to allow the selection of a project to edit using the command line by browsing a fixed format folder structure.
 
-Designed for simplicity, it can be used with any programming language, but currently only has additional features for JavsScript/TypeScript. It assumes use of [pnpm](https://github.com/pnpm/pnpm) as your package manager.
+Designed for simplicity, it can be used with any programming language. Currently it only has additional features for JavsScript/TypeScript. It assumes use of [pnpm](https://github.com/pnpm/pnpm) as your package manager.
 
          Dir structure in PROJECT_FOLDER must have two levels for selection:
 
