@@ -61,18 +61,5 @@ if [[ -f package.json ]]; then
     fi
 fi
 
-if [[ -f ./node_modules/.bin/rollup ]]; then
-    echo
-    echo "${BOLD}Rollup detected locally${NORMAL}"
-    echo
-    read -p "Run Rollup in watch mode? (y/N) " -n 1
-    echo
-    if [[ $REPLY =~ ^[Yy]$ ]]; then
-        code .
-        ./node_modules/.bin/rollup -c --watch
-        exit
-    fi
-fi
-
 # GTK_IM_MODULE=ibus is workaround for Centos bug that stops some VS Code shortcuts working
 GTK_IM_MODULE=ibus code .
